@@ -12,6 +12,26 @@ class App extends Component{
     }
   }
 
+  citySearch(e){
+    let city = e.target.value.toLocaleUpperCase();    //on screen it looks lowercase but it retrieves results
+    try{
+      console.log("fetching");
+    fetch('https://ctp-zip-api.herokuapp.com/city/'+ city)
+        .then(res => res.json())
+        .then(json => {
+          this.setState({
+            items: json,
+          });
+        });
+    if(this.state.items != null){
+      this.setState({isLoaded:true})
+      
+    }
+    else{this.setState({isLoaded:false})}
+  }catch(e){console.error(e);}
+        
+  }
+
   render(){
     const search = <input id="citySearch" type="text" placeholder="Search cities" onChange={this.citySearch}/>
     var{ isLoaded, items, zipitems} = this.state;
