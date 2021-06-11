@@ -64,12 +64,12 @@ class App extends Component{
                 {items.map(item => (
                   <li id="list" key={item.id}>
                     {this.zipSearch(item)}
-                    {zipitems.map(newItems => (
+                  {/*  {zipitems.map(newItems => (
                       <li>
                       <li id="item" key={newItems.id}>State: {newItems.State}</li>
                       <li id="item" key={newItems.id}>Total Wages: {newItems.TotalWages}</li>
                       </li>
-                    ))}
+                  ))} */}
                     {item}
                 </li>
                 ))}
