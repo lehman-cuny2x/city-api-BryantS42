@@ -32,6 +32,17 @@ class App extends Component{
         
   }
 
+  zipSearch(zipcode){
+    console.log(zipcode)
+    fetch('http://ctp-zip-api.herokuapp.com/zip/'+ zipcode)
+    .then(res => res.json())
+        .then(json => {
+          this.setState({
+            zipitems: json,
+          });
+        });
+  }
+
   render(){
     const search = <input id="citySearch" type="text" placeholder="Search cities" onChange={this.citySearch}/>
     var{ isLoaded, items, zipitems} = this.state;
