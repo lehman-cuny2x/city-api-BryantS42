@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+#root{
+  background-color: antiquewhite;
+  height: 150px;
+}
+body{
+  background-color: royalblue;
+}
+ul{
+  display: grid;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+h4{
+  background-color: gold;
+  margin-top: 1px;
+}
+p{
+  margin-top: 100px;
+}
+
+#list{
+  width: 300px;
+  border: 1.5px solid #17a2b8;
+  background-color: rgb(251,249,243,0.8);
+  padding: 15px;
+  margin-bottom: 50px;
+  list-style: none;
+
+}
+
+#item{
+  list-style:disc;
+  display: grid;
+  justify-content:start;
+}
