@@ -10,7 +10,6 @@ class App extends Component{
     }
   }
 
-
   promisePractice = (e) => {
     
     let city = e.target.value.toLocaleUpperCase(); 
